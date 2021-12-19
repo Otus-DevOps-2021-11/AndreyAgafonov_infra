@@ -28,7 +28,7 @@
 
 Для выполнения домашнего задания в Ya Cloud созданы 2 вирутальные машины
 
-![image-20201218024521497](readme.assets/image-20201218024521497.png)
+![image-20201218024521497](https://raw.githubusercontent.com/Otus-DevOps-2021-11/AndreyAgafonov_infra/ccfb20e8e023dfa4cc20b1f166f833a7b2a8ead0/readme.assets/image-20201218024521497.png)
 
 Приватная сеть 10.128.0.0/24
 
@@ -61,13 +61,13 @@ Host 10.128.0.23
 
 1. подключаемся к bastion
 
-   ![image-20201218025420752](readme.assets/image-20201218025420752.png)
+   ![image-20201218025420752](https://raw.githubusercontent.com/Otus-DevOps-2021-11/AndreyAgafonov_infra/ccfb20e8e023dfa4cc20b1f166f833a7b2a8ead0/readme.assets/image-20201218025420752.png)
 
 2. Подключаемся к машинке внутри сети используя бастион хост:
 
 
 
-   ![image-20201218025559140](readme.assets/image-20201218025559140.png)
+   ![image-20201218025559140](https://raw.githubusercontent.com/Otus-DevOps-2021-11/AndreyAgafonov_infra/ccfb20e8e023dfa4cc20b1f166f833a7b2a8ead0/readme.assets/image-20201218025559140.png)
 
 При желании использовать короткое понятно имя - в файл hosts (/etc/hosts) добавить запись вида
 `10.128.0.35 somehost`, скорректировать соответствующим образом файл config и подклчючение производить уже используя имя, либо если это происходит в рамках рабочей схему - конечно же использование DNS.
@@ -87,9 +87,9 @@ Host 10.128.0.23
 
 На снимке видно, что настроен VPN сервер и имеется активное соединение (слева), добавлен маршрут для нашей внутренней сети и подключенный сам клиент(справа), а так же сертифик Let'sEncrypt(снимок ниже:
 
-![image-20201218022034264](readme.assets/image-20201218022034264.png)
+![image-20201218022034264](https://raw.githubusercontent.com/Otus-DevOps-2021-11/AndreyAgafonov_infra/ccfb20e8e023dfa4cc20b1f166f833a7b2a8ead0/readme.assets/image-20201218022034264.png)
 
-![image-20201218030227513](readme.assets/image-20201218030227513.png)
+![image-20201218030227513](https://raw.githubusercontent.com/Otus-DevOps-2021-11/AndreyAgafonov_infra/ccfb20e8e023dfa4cc20b1f166f833a7b2a8ead0/readme.assets/image-20201218030227513.png)
 
 
 
@@ -99,4 +99,4 @@ Host 10.128.0.23
 
 Команда для проверки: `ssh -i {path_to_ssh_key} appuser@10.128.0.23`
 
-![image-20201218022941235](readme.assets/image-20201218022941235.png)
+![image-20201218022941235](https://raw.githubusercontent.com/Otus-DevOps-2021-11/AndreyAgafonov_infra/ccfb20e8e023dfa4cc20b1f166f833a7b2a8ead0/readme.assets/image-20201218022941235.png)
