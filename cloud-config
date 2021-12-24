@@ -1,0 +1,17 @@
+#cloud-config
+users:
+  - name: ubuntu
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/V6sukLB7xJoQGa4D8amReY6PXub8cfHQzR+tyEFFTacuWy8N1RmsFoaQWcJEcJe0FJLK7GqTYV04DpvMHAOt2ZurC3Xm7nsLoPjOrezk7UecpZQ/PLGwzQRiyiLL4QZa086r+aGr+laAcqqZMQ2Vwedn+/2u5Knrl5WKfF8jH2N2qX/lFuElnJMFEqWEwJ2R8/1Svkjh+VRL3GaC/4G9q24WkTN90/Ca5T0K30UoF8OTCuKNlKaCNS0zi0EzmrzpFdrsK4MhTmH9dJAIiWrCsKI6RudA0Ys7LO8U9vY4FAaI86KTrtmXgZuDLcDISyx/KBPEwUSBAMi9ES5me42W/Tg5sGBq5IgjRw3PAp9yFxKBO76tOI2jAPNb6MukyN1U1ohgR1z7kMJucku58eJUUmV+6o/htFc0clAVGzkrxoLN5XB9fQWbgUFW4+iYNg8g8P7ochHqqpYlu/vGKYM9l7F6g+dEjarDWgtNdrVv+tRHm54m7DM7bVK0XBnBZuU= a.agafonov@fedora
+runcmd:
+  - cd /opt
+  - sudo apt-get update -y
+  - sudo apt-get install git -y
+  - git clone https://github.com/AndreyAgafonov/shared.git
+  - cd shared
+  - sudo bash install_ruby.sh
+  - sudo bash install_mongodb.sh
+  - sudo bash deploy.sh
