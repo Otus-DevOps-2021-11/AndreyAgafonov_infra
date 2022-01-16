@@ -3,3 +3,11 @@ credentials
 variables.json
 
 id_rsa_yandex_access
+
+
+#Terraform#
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
